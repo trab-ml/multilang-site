@@ -1,6 +1,6 @@
 # Django multilang site
 
-- After executing this command, the server will [listening at port 80](http://127.0.0.1:8000/).
+- After executing `python3 manage.py runserver` in multilang_site directory, the server will [listening at port 80](http://127.0.0.1:8000/).
 
 ## Development process
 
@@ -45,7 +45,7 @@
   
   /multilang_site$ django-admin manage.py makemessages -l fr # creates translation files (`.po`) for fr language
   /multilang_site$ django-admin manage.py makemessages -l en # creates translation files (`.po`) for en language
-  
+
   /multilang_site$ django-admin manage.py compilemessages # Translate characters in `.po` files and compile them
   ```
 
