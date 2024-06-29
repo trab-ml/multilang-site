@@ -1,0 +1,53 @@
+{% load i18n %}
+<!DOCTYPE html>
+{% get_current_language as current_language %}
+<html lang="{{ current_language }}">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% trans "Articles du blog" %}</title>
+        <style>
+            table,
+            tr,
+            td,
+            th {
+                border: 1px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>{% trans "Articles" %}</h1>
+
+        <table>
+            <caption>
+                {% trans "Table des articles du blog" %}
+            </caption>
+            <thead>
+                <tr>
+                    <th>{% trans "Titre" %}</th>
+                    <th>{% trans "Contenu" %}</th>
+                    <th>{% trans "Date de publication" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                <tr>
+                    <td>{{ article.title }}</td>
+                    <td>{{ article.content }}</td>
+                    <td>{{ article.publication_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <ol>
+            {% for article in articles %}
+            <li>
+                {{ article.title }} - {{ article.content }} - {{ article.publication_date }}
+            </li>
+            {% endfor %}
+        </ol>
+        
+        <a href="/fr/">{% trans "Français" %}</a> |
+        <a href="/en/">{% trans "English" %}</a>
+    </body>
+</html>
