@@ -1,6 +1,9 @@
 # Django multilang site
 
-- After executing `python3 manage.py runserver` in multilang_site directory, the server will [listening at port 80](http://127.0.0.1:8000/).
+After executing `python3 manage.py runserver` in multilang_site directory, the server will listening at port 8000:
+
+- Articles page will be found at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+- The chatbot will be found at [http://127.0.0.1:8000/chatbot/](http://127.0.0.1:8000/chatbot/)
 
 ## Development process
 
@@ -15,6 +18,11 @@
   sudo apt-get update
   sudo apt-get install gettext
   msguniq --version
+
+  pip install openai
+  openai --version
+
+  pip install python-dotenv
   ```
 
 - Project creation
@@ -43,10 +51,10 @@
   ```bash
   /multilang_site$ mkdir -p main/locale
   
-  /multilang_site$ django-admin manage.py makemessages -l fr # creates translation files (`.po`) for fr language
-  /multilang_site$ django-admin manage.py makemessages -l en # creates translation files (`.po`) for en language
+  /multilang_site$ django-admin makemessages -l fr # creates translation files (`.po`) for fr language
+  /multilang_site$ django-admin makemessages -l en # creates translation files (`.po`) for en language
 
-  /multilang_site$ django-admin manage.py compilemessages # Translate characters in `.po` files and compile them
+  /multilang_site$ django-admin compilemessages # Translate characters in `.po` files and compile them
   ```
 
   ```python
@@ -59,14 +67,14 @@
   
   - `{% trans %}` filter are used to translate static elements (example: `{% trans %}`)
 
-- Migrate
+- Migration
 
   ```bash
   python3 manage.py makemigrations
   python3 manage.py migrate
   ```
 
-- Interact with the database
+- Interaction with the database
 
   ```bash
   sqlite3 db.sqlite3
@@ -85,7 +93,7 @@
   CREATE TABLE IF NOT EXISTS "main_article" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(200) NOT NULL, "content" text NOT NULL, "publication_date" datetime NOT NULL);
   ```
 
-- Django shell
+- Inserting in the database (using django shell)
 
   ```bash
   $ python3 manage.py shell
@@ -114,3 +122,4 @@
 - <https://docs.djangoproject.com/en/5.0/misc/design-philosophies/#dry>
 - <https://docs.djangoproject.com/en/5.0/>
 - <https://chatgpt.com/>
+- <https://platform.openai.com/docs/api-reference/introduction>

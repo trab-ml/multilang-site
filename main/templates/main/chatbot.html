@@ -1,0 +1,21 @@
+{% load i18n %}
+<!DOCTYPE html>
+{% get_current_language as current_language %}
+<html lang="{{ current_language }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="message">{% trans "Votre question:" %}</label>
+        <input type="text" id="message" name="message" placeholder="Ask me anything..." required />
+        <button type="submit">{% trans "Envoyer" %}</button>
+    </form>
+    {% if response %}
+        <p>{% trans "Réponse:" %} {{ response }}</p>
+    {% endif %}
+</body>
+</html>

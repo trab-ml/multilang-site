@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-30 00:53+0200\n"
+"POT-Creation-Date: 2024-06-30 21:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,30 +22,42 @@ msgstr ""
 msgid "Articles du blog"
 msgstr ""
 
-#: main/templates/main/article_list.html:18
+#: main/templates/main/article_list.html:36
 msgid "Articles"
 msgstr ""
 
-#: main/templates/main/article_list.html:22
+#: main/templates/main/article_list.html:40
 msgid "Table des articles du blog"
 msgstr ""
 
-#: main/templates/main/article_list.html:26
+#: main/templates/main/article_list.html:44
 msgid "Titre"
 msgstr ""
 
-#: main/templates/main/article_list.html:27
+#: main/templates/main/article_list.html:45
 msgid "Contenu"
 msgstr ""
 
-#: main/templates/main/article_list.html:28
+#: main/templates/main/article_list.html:46
 msgid "Date de publication"
 msgstr ""
 
-#: main/templates/main/article_list.html:50
+#: main/templates/main/article_list.html:60
 msgid "Français"
 msgstr ""
 
-#: main/templates/main/article_list.html:51
+#: main/templates/main/article_list.html:61
 msgid "English"
+msgstr ""
+
+#: main/templates/main/chatbot.html:13
+msgid "Votre question:"
+msgstr ""
+
+#: main/templates/main/chatbot.html:15
+msgid "Envoyer"
+msgstr ""
+
+#: main/templates/main/chatbot.html:18
+msgid "Réponse:"
 msgstr ""

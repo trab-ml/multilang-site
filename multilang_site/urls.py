@@ -6,7 +6,6 @@ from main import views
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
-    # path('', include('main.urls')),
-    path('', views.article_list, name='article_list'),
+    path('', include('main.urls')),
     prefix_default_language=False,
 )
